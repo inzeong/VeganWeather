@@ -43,7 +43,7 @@ class Vegan_Cosmetics:
         week = ymd.weekday()
         
         # 공휴일
-        holiday = pd.read_excel('./data/국가공휴일2.xlsx')
+        holiday = pd.read_excel('./data/국가공휴일.xlsx')
         holi_idx = holiday[(holiday['년'] == int(year)) & (holiday['월'] == int(month)) & (holiday['일'] == int(day))].index
         if len(holi_idx) == 0:
             holi = 0   # 공휴일이면 1, 아니면 0
